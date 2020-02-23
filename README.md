@@ -4,7 +4,7 @@ Please fork this template and perform the initial setup steps:
 
 1. Find and replace <clientcode> with the appropriate shortname for the analytics project.
 2. Copy the `.env.dist` to `.env` and fill in the information.
-3. Review the packages.yml and make sure they apply for this project. 
+3. Review the `packages.yml` and make sure they apply for this project. 
 4. Review `dbt_project.yml`
 
 ## Developing with Lando
@@ -31,3 +31,10 @@ Try running the following commands:
 - Join the [chat](http://slack.getdbt.com/) on Slack for live discussions and support
 - Find [dbt events](https://events.getdbt.com) near you
 - Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+
+
+### Template To Do
+
+- [ ] Mount a separate Python environment for Singer
+- [ ] Implement a `singer-db-import` Lando command to pipe in SQL data to the mounted PgSQL database
+- [ ] Provide instructions for `pgsql` import with Lando 
