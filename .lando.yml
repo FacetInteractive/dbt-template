@@ -1,0 +1,31 @@
+name: <clientcode>-analytics
+env_file:
+  - .env
+services:
+  appserver:
+    type: python:3.7
+    portforward: true
+    build:
+      - pip install -r requirements.txt
+      - cd /app && dbt deps
+    run_as_root:
+      - "apt-get update -y"
+      - "apt-get install vim -y"
+  # We really only need one database on our local to perform development work against
+  database:
+    type: postgres:10
+    portforward: true
+    creds:
+      database: dw
+      # Note that you cannot change the below but they are shown here for transparency
+      # You can read more about why this is below
+      # By "NO PASSWORD" we mean the password is blank
+      # user: postgres
+      # password: NO PASSWORD
+tooling:
+  dbt-deps:
+    service: appserver
+    cmd: cd /app && dbt deps
+  dbt-run:
+    service: appserver
+    cmd: cd /app && dbt run
