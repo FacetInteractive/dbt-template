@@ -1,0 +1,7 @@
+packages:
+  - package: fishtown-analytics/dbt_utils
+    version: "0.2.4"
+  - package: fishtown-analytics/redshift
+    version: "0.2.3"
+  - package: fishtown-analytics/stitch-utils
+    version: "0.1.7"
