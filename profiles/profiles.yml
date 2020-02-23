@@ -1,0 +1,21 @@
+default:
+  target: dev
+  outputs:
+    dev:
+      type: "{{ env_var('DW_TYPE') }}"
+      host: "{{ env_var('DW_HOST') }}"
+      user: "{{ env_var('DW_USER') }}"
+      pass: "{{ env_var('DW_PW') }}"
+      port: "{{ env_var('DW_PORT') }}"
+      dbname: "{{ env_var('DW_DB') }}"
+      schema: "dbt_{{ env_var('DW_USER') }}"
+      threads: 4
+    prod:
+      type: "{{ env_var('DW_TYPE') }}"
+      host: "{{ env_var('DW_HOST') }}"
+      user: "{{ env_var('DW_USER') }}"
+      pass: "{{ env_var('DW_PW') }}"
+      port: "{{ env_var('DW_PORT') }}"
+      dbname: "{{ env_var('DW_DB') }}"
+      schema: analytics
+      threads: 4
