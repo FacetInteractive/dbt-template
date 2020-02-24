@@ -2,10 +2,10 @@
 
 Please fork this template and perform the initial setup steps:
 
-1. Find and replace <clientcode> with the appropriate shortname for the analytics project.
-2. Copy the `.env.dist` to `.env` and fill in the information.
-3. Review the `packages.yml` and make sure they apply for this project. 
-4. Review `dbt_project.yml`
+1. [ ] Find and replace `<clientcode>` with the appropriate shortname for the analytics project.
+2. [ ] Copy the `.env.dist` to `.env` and fill in the information.
+3. [ ] Review the `packages.yml` and make sure they apply for this project. 
+4. [ ] Review `dbt_project.yml`
 
 ## Developing with Lando
 
