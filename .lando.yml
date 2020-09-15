@@ -17,6 +17,7 @@ services:
     run_as_root:
       - "apt-get update -y"
       - "apt-get install vim -y"
+      - "apt-get install git libpq-dev python-dev python3-pip -y"
   # We really only need one database on our local to perform development work against
   database:
     type: postgres:10

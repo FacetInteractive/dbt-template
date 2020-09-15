@@ -5,8 +5,10 @@
 name: '<clientcode>_analytics'
 version: '1.0.0'
 
+config-version: 2
+
 # Pin the version so you don't experience a regression without intention
-require-dbt-version: ">=0.15.2"
+require-dbt-version: ">=0.17.2"
 
 # This setting configures which "profile" dbt uses for this project.
 profile: 'default'
